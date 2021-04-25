@@ -1,7 +1,7 @@
 _id: spc_406cc860ac184ba294b9742ab32f5330
 type: ApiSpec
 parentId: wrk_36cfa3644627485db275affb4f6d04df
-modified: 1619385564088
+modified: 1619393258547
 created: 1619321045273
 fileName: planets.yaml
 contents: >
@@ -57,6 +57,57 @@ contents: >
                   type: array
                   items:
                     $ref: "#/components/schemas/planet"
+                    
+                examples:
+                  response:
+                    value:
+                      meta_data:
+                        api_name: planets
+                        result_data:
+                          [
+                              {
+                                  "moons": 0,
+                                  "name": "Mercury",
+                                  "position": 1
+                              },
+                              {
+                                  "moons": 0,
+                                  "name": "Venus",
+                                  "position": 2
+                              },
+                              {
+                                  "moons": 1,
+                                  "name": "Earth",
+                                  "position": 3
+                              },
+                              {
+                                  "moons": 2,
+                                  "name": "Mars",
+                                  "position": 4
+                              },
+                              {
+                                  "moons": 79,
+                                  "name": "Jupiter",
+                                  "position": 5
+                              },
+                              {
+                                  "moons": 62,
+                                  "name": "Saturn",
+                                  "position": 6
+                              },
+                              {
+                                  "moons": 27,
+                                  "name": "Uranus",
+                                  "position": 7
+                              },
+                              {
+                                  "moons": 14,
+                                  "name": "Neptune",
+                                  "position": 8
+                              }
+                          ]
+                    
+                    
 
     /planets/{planetId}:
       get:
