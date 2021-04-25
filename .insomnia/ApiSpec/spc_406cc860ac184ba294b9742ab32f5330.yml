@@ -1,7 +1,7 @@
 _id: spc_406cc860ac184ba294b9742ab32f5330
 type: ApiSpec
 parentId: wrk_36cfa3644627485db275affb4f6d04df
-modified: 1619393258547
+modified: 1619393965098
 created: 1619321045273
 fileName: planets.yaml
 contents: >
@@ -26,10 +26,11 @@ contents: >
       x-kong-plugin-rate-limiting-advanced:
         config:
           limit: 
-          - 3
+          - 6
           window_size: 
           - 10
           sync_rate: -1
+
 
 
 
