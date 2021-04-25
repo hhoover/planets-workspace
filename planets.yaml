@@ -9,24 +9,25 @@ info:
     email: aaron@konghq.com
 servers:
   - url: http://planets:5000
-    description: Sample project running locally  
+    description: Sample project running locally
+    x-kong-plugin-cors:
+      config:
+        origins:
+        - '*'
+    x-kong-plugin-rate-limiting-advanced:
+      config:
+        limit: 
+        - 3
+        window_size: 
+        - 10
+        sync_rate: -1 
 
   
 externalDocs:
   description: GitHub project for the code and information about this API
   url: https://github.com/aaronhmiller/planets-workspace
 
-x-kong-plugin-cors:
-  config:
-    origins:
-      - '*'
-x-kong-plugin-rate-limiting-advanced:
-  config:
-    limit: 
-    - 3
-    window_size: 
-    - 10
-    sync_rate: -1
+
 
 paths:
   /planets:
@@ -70,8 +71,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/planet"
-    x-kong-plugin-request-validator:
-      enabled: true
+        x-kong-plugin-request-validator:
+          enabled: true
 
 components:
   schemas:
