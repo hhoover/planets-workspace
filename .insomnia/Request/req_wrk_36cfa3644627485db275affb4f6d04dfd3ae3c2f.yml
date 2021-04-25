@@ -3,7 +3,7 @@ type: Request
 parentId: fld_wrk_36cfa3644627485db275affb4f6d04df249cec6c
 modified: 1619376183926
 created: 1619321337856
-url: "{{ base_url }}/planets/6"
+url: "{{ base_url }}/planets/{{ planetId }}"
 name: Fetch one planet by position
 description: ""
 method: GET
