@@ -1,0 +1,21 @@
+_id: req_wrk_36cfa3644627485db275affb4f6d04df62106ae1
+type: Request
+parentId: fld_wrk_36cfa3644627485db275affb4f6d04df249cec6c
+modified: 1619321337858
+created: 1619321337858
+url: "{{ base_url }}/planets"
+name: List all planets
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1619321337858
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,11 @@
+_id: ut_9f926dd7b18d4e048d5125c74169c222
+type: UnitTest
+parentId: uts_10f838d8ee144be3862b6f49a687e032
+modified: 1619335093829
+created: 1619335083445
+requestId: req_wrk_36cfa3644627485db275affb4f6d04df62106ae1
+name: Pluto Lives!
+code: |-
+  const response2 = await insomnia.send();
+  const body = JSON.parse(response2.data);
+  expect(body).to.have.lengthOf(9);

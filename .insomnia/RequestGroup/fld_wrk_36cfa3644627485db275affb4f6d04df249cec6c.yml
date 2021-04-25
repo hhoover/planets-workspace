@@ -1,0 +1,10 @@
+_id: fld_wrk_36cfa3644627485db275affb4f6d04df249cec6c
+type: RequestGroup
+parentId: wrk_36cfa3644627485db275affb4f6d04df
+modified: 1619321337859
+created: 1619321337859
+name: planets
+description: API containing solar system data
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1619321337859

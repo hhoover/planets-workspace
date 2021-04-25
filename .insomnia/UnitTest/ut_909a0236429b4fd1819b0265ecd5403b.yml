@@ -1,0 +1,11 @@
+_id: ut_909a0236429b4fd1819b0265ecd5403b
+type: UnitTest
+parentId: uts_8e89ddbba7f34ea1b8ab0f34328e8f52
+modified: 1619334859165
+created: 1619334836467
+requestId: req_wrk_36cfa3644627485db275affb4f6d04df62106ae1
+name: Test for Removal of Pluto
+code: |-
+  const response3 = await insomnia.send();
+  const body = JSON.parse(response3.data);
+  expect(body).to.have.lengthOf(8);

@@ -1,0 +1,106 @@
+_id: spc_406cc860ac184ba294b9742ab32f5330
+type: ApiSpec
+parentId: wrk_36cfa3644627485db275affb4f6d04df
+modified: 1619370841604
+created: 1619321045273
+fileName: planets.yaml
+contents: >
+  openapi: 3.0.2
+
+  info:
+    title: Planets and Webhooks Demo API
+    version: 0.0.1
+    description: Simple flask-backed API showing some example API endpoints and with webhook debugging features.
+    contact:
+      name: Lorna Mitchell
+      url: https://github.com/lornajane/flask-planets-and-webhooks
+      email: github@lornajane.net
+  servers:
+    - url: http://localhost:5000
+      description: Sample project running locally  
+
+
+    
+  externalDocs:
+    description: GitHub project for the code and information about this API
+    url: https://github.com/lornajane/flask-planets-and-webhooks
+
+  x-kong-plugin-cors:
+    config:
+      origins:
+        - '*'
+  x-kong-plugin-rate-limiting-advanced:
+    config:
+      limit: 
+      - 3
+      window_size: 
+      - 10
+      sync_rate: -1
+
+  paths:
+    /planets:
+      get:
+        operationId: allPlanets
+        summary: List all planets
+        description: Returns a list of all the planets that are stored in the system.
+        tags:
+          - planets
+        responses:
+          '200':
+            description: Planets in a list
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/planet"
+
+    /planets/{planetId}:
+      get:
+        operationId: onePlanet
+        summary: Fetch one planet by position
+        description: Get the data relating to one planet
+        tags:
+          - planets
+        parameters:
+        - name: planetId
+          in: path
+          required: true
+          schema:
+            type: number
+            example: 4
+            minimum: 1
+            maximum: 8
+
+        responses:
+          '200':
+            description: Planets in a list
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/planet"
+      x-kong-plugin-request-validator:
+        enabled: true
+
+  components:
+    schemas:
+      planet:
+        type: object
+        properties:
+          name:
+            type: string
+            description: Name of planet
+            example: "Saturn"
+          position:
+            type: number
+            description: Order in place from the sun
+            example: 6
+          moons:
+            type: number
+            description: Number of moons, according to NASA
+            example: 62
+
+  tags:
+    - name: planets
+      description: API containing solar system data
+contentType: yaml

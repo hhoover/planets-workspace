@@ -1,0 +1,11 @@
+_id: ut_04160bfc63974e2f8d03f8c2b9cb9699
+type: UnitTest
+parentId: uts_8e89ddbba7f34ea1b8ab0f34328e8f52
+modified: 1619329782234
+created: 1619329681729
+requestId: req_wrk_36cfa3644627485db275affb4f6d04dfd3ae3c2f
+name: Test Moon
+code: |-
+  const response = await insomnia.send();
+  const body = JSON.parse(response.data);
+  expect(body).to.have.property('moons');
