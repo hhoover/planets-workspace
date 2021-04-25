@@ -1,7 +1,7 @@
 _id: spc_406cc860ac184ba294b9742ab32f5330
 type: ApiSpec
 parentId: wrk_36cfa3644627485db275affb4f6d04df
-modified: 1619372750464
+modified: 1619378303156
 created: 1619321045273
 fileName: planets.yaml
 contents: >
@@ -19,6 +19,17 @@ contents: >
     - url: http://localhost:5000
       description: Sample project running locally  
 
+      x-kong-plugin-cors:
+        config:
+          origins:
+            - '*'
+      x-kong-plugin-rate-limiting-advanced:
+        config:
+          limit: 
+          - 3
+          window_size: 
+          - 10
+          sync_rate: -1
 
 
     
@@ -26,17 +37,6 @@ contents: >
     description: GitHub project for the code and information about this API
     url: https://github.com/lornajane/flask-planets-and-webhooks
 
-  x-kong-plugin-cors:
-    config:
-      origins:
-        - '*'
-  x-kong-plugin-rate-limiting-advanced:
-    config:
-      limit: 
-      - 3
-      window_size: 
-      - 10
-      sync_rate: -1
 
   paths:
     /planets:
@@ -80,8 +80,8 @@ contents: >
               application/json:
                 schema:
                   $ref: "#/components/schemas/planet"
-      x-kong-plugin-request-validator:
-        enabled: true
+        x-kong-plugin-request-validator:
+          enabled: true
 
   components:
     schemas:
