@@ -17,7 +17,7 @@ servers:
     x-kong-plugin-rate-limiting-advanced:
       config:
         limit: 
-        - 3
+        - 5
         window_size: 
         - 10
         sync_rate: -1 
