@@ -1,7 +1,7 @@
 _id: spc_406cc860ac184ba294b9742ab32f5330
 type: ApiSpec
 parentId: wrk_36cfa3644627485db275affb4f6d04df
-modified: 1619385458440
+modified: 1619385564088
 created: 1619321045273
 fileName: planets.yaml
 contents: >
@@ -10,7 +10,7 @@ contents: >
   info:
     title: Planets API
     version: 0.0.1
-    description: Simple flask-backed API showing some example API endpoints.
+    description: Simple flask-backed API showing some example API endpoints and added capabilities from integrating it with the Kong API Gateway.
     contact:
       name: Aaron Miller
       url: https://github.com/aaronhmiller/planets-workspace
@@ -30,6 +30,7 @@ contents: >
           window_size: 
           - 10
           sync_rate: -1
+
 
 
 
