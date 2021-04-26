@@ -2,8 +2,9 @@
 
 This application contains: one flask app in `app.py`. It serves up data about planets from [NASA data](https://solarsystem.nasa.gov/moons/in-depth/) at `/planets` and `/planets/<position>`. It's used in an end-to-end demonstration of Kong.
 
-It's based on work by [Lorna Jane Mitchell](https://github.com/lornajane) and it's beauty is in it's simplicity. It's a training ground for originating API ideas as a specification before implementation. It's been augmented with Kong and Insomnia to show how APIOps can be leveraged to make the API Lifecycle more efficient, clear, and reliable.
+It's based on work by [Lorna Jane Mitchell](https://github.com/lornajane) and its beauty is in its simplicity & clarity. It's a training ground for originating API ideas as a specification before implementation. It has been augmented with Kong and Insomnia to show how APIOps can be leveraged to make the API Lifecycle more efficient, clear, and reliable.
 
+<img width="1800" alt="API Lifecycle" src="https://user-images.githubusercontent.com/223486/116041967-bb83ad80-a622-11eb-9463-4546a79eba36.png">
 
 
 ## Running
