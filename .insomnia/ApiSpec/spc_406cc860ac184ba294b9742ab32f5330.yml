@@ -1,7 +1,7 @@
 _id: spc_406cc860ac184ba294b9742ab32f5330
 type: ApiSpec
 parentId: wrk_36cfa3644627485db275affb4f6d04df
-modified: 1619408826945
+modified: 1619409517077
 created: 1619321045273
 fileName: planets.yaml
 contents: >
@@ -9,7 +9,7 @@ contents: >
 
   info:
     title: Planets API
-    version: 0.0.1
+    version: 0.0.2
     description: Simple flask-backed API showing some example API endpoints and added capabilities from integrating it with the Kong API Gateway.
     contact:
       name: Aaron Miller
@@ -103,6 +103,11 @@ contents: >
                                   "moons": 14,
                                   "name": "Neptune",
                                   "position": 8
+                              },
+                              {
+                                  "moons": 0,
+                                  "name": "Pluto",
+                                  "position": 9
                               }
                           ]
                     
@@ -123,7 +128,7 @@ contents: >
             type: number
             example: 4
             minimum: 1
-            maximum: 8
+            maximum: 9
 
         responses:
           '200':
