@@ -1,9 +1,9 @@
-_id: req_08124f81657e47be87e9c4ac9a737438
+_id: req_9994d5657745403b89b246fd812aa073
 type: Request
 parentId: fld_wrk_36cfa3644627485db275affb4f6d04df249cec6c
-modified: 1619393284748
-created: 1619392649857
-url: http://localhost:8000/planets-mock/planets
+modified: 1619414422577
+created: 1619414378849
+url: "{{ base_url }}/planets-mock/planets"
 name: Mocked Request
 description: ""
 method: GET
@@ -11,7 +11,7 @@ body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1619321337806
+metaSortKey: -1619321337756
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

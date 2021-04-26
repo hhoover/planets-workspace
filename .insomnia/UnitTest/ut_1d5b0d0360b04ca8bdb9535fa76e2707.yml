@@ -1,0 +1,10 @@
+_id: ut_1d5b0d0360b04ca8bdb9535fa76e2707
+type: UnitTest
+parentId: uts_ba5863db64f3453cb845d308765fd250
+modified: 1619414154480
+created: 1619414150360
+requestId: req_08124f81657e47be87e9c4ac9a737438
+name: Mock returns 200
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
