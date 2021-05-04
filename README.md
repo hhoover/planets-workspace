@@ -18,10 +18,10 @@ In its more portable form, run it as a Docker Container:
 docker run -d --name planets -p 5000:5000 kongaaron/flask-planets
 ```
 
-## Building
-To build and tag a new image (see deploy.sh):
+## Building your own
+To build and tag a new image (see deploy.sh), clone this repo and:
 ```
-docker build -t kongaaron/flask-planets:1.0 -t kongaaron/flask-planets:latest .
+docker build -t <your_docker_hub_account>/flask-planets:1.0 -t <your_docker_hub_account>/flask-planets:latest .
 ```
 Once you tag and build, upload to `hub.docker.com`:
-`docker push kongaaron/flask-planets`
+`docker push <your_docker_hub_account>/flask-planets`
