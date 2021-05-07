@@ -1,7 +1,7 @@
 _id: spc_406cc860ac184ba294b9742ab32f5330
 type: ApiSpec
 parentId: wrk_36cfa3644627485db275affb4f6d04df
-modified: 1619416412170
+modified: 1620429417891
 created: 1619321045273
 fileName: planets.yaml
 contents: >
@@ -32,6 +32,7 @@ contents: >
           sync_rate: -1
       tags:
         - planets
+
 
 
 
@@ -149,6 +150,8 @@ contents: >
                   
         x-kong-plugin-request-validator:
           enabled: true
+          config:
+            verbose_response: true
 
   components:
     schemas:
