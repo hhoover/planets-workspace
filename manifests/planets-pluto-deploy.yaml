@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: planets-service
+spec:
+  ports:
+  - name: planets
+    port: 5000
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: planets
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: planets
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: planets
+  template:
+    metadata:
+      labels:
+        app: planets
+    spec:
+      containers:
+        - name: planets
+          image: kongaaron/flask-planets:2.0-pluto
+          ports:
+            - containerPort: 5000
