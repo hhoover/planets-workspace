@@ -1,13 +1,13 @@
 _id: env_87be150d7f724ae29f41b22ffe585322
 type: Environment
 parentId: env_a4e0d31a7f6b1caf115ea79abea67afd64e3c7e8
-modified: 1619408895434
+modified: 1620930450439
 created: 1619329574494
 name: Gateway
 data:
   scheme: http
   base_path: ""
-  host: localhost:8000
+  host: planets.kong.lan
   planetId: "3"
 dataPropertyOrder:
   "&":

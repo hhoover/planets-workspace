@@ -1,22 +1,20 @@
 _id: spc_406cc860ac184ba294b9742ab32f5330
 type: ApiSpec
 parentId: wrk_36cfa3644627485db275affb4f6d04df
-modified: 1620485302300
+modified: 1620931446111
 created: 1619321045273
 fileName: planets.yaml
 contents: >
   openapi: 3.0.2
 
   info:
-    title: Planets API
+    title: Planets
     version: 0.0.3
     description: Simple flask-backed API showing two example API endpoints and added capabilities by integrating it with the Kong API Gateway.
     contact:
-      name: Aaron Miller
-      url: https://github.com/aaronhmiller/planets-workspace
-      email: aaron@konghq.com
+      name: Hart Hoover
   servers:
-    - url: http://planets:5000
+    - url: http://planets.kong.lan
       description: Local project  
 
       x-kong-plugin-cors:
@@ -30,8 +28,10 @@ contents: >
           window_size: 
           - 10
           sync_rate: -1
+          namespace: random_auto_generated_string
       tags:
         - planets
+
 
 
     
@@ -143,9 +143,6 @@ contents: >
                               "name": "Earth",
                               "position": 3
                           }                
-                  
-        x-kong-plugin-request-validator:
-          enabled: true
 
   components:
     schemas:
